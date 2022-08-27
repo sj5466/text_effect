@@ -1,0 +1,132 @@
+/* info */
+.info {
+    position: absolute;
+    z-index: 1000;
+}
+
+.info h1 {
+    font-size: 20px;
+    border-bottom: 1px dashed #fff;
+    margin-bottom: 8px;
+}
+
+.info p, .info li {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 3px;
+}
+
+.info li.active a:first-child {
+    background: #fff;
+    color: #000;
+}
+
+.info.left {
+    left: 20px;
+    top: 20px;
+}
+
+.info.right {
+    right: 10px;
+    top: 10px;
+}
+
+.info.right a {
+    display: inline-block;
+    margin-left: 5px;
+    width: 20px; height: 20px;
+    border: 1px dashed #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.info.right a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.info.bottom {
+    left: 10px;
+    bottom: 10px;
+}
+
+.info.bottom li {
+    display: block;
+    transition: all 0.2s;
+}
+
+.info.bottom li.active {
+    color: orange;
+}
+
+.info.bottom li:hover {
+    color: orange;
+}
+
+.info.view {
+    right: 20px;
+    bottom: 20px;
+}
+
+.info.view a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 5px 30px;
+}
+
+@media (max-width: 800px){
+    .info.bottom {display: none;}
+    .info.right {display: none;}
+}
+
+/* main */
+.textWrap {
+    position: absolute; 
+    left: 50%; top: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.textWrap .line {
+    width: 100%; display: flex;
+}
+
+.textWrap .line .left {
+    width: 50vw; 
+    color: gold; 
+    transform: skew(0deg, -15deg); 
+    overflow: hidden;
+}
+
+.textWrap .line .left .spanWrap {
+    width: 100vw; 
+    text-align: center;
+}
+
+.textWrap .line .right {
+    width: 50vw; 
+    transform: skew(0deg, 15deg); 
+    overflow: hidden;
+}
+
+.textWrap .line .right .spanWrap {
+    width: 100vw; 
+    text-align: center; 
+    transform: translate(-50vw);
+}
+
+.textWrap span {
+    display: inline-block; 
+    font-size: 3vw; 
+    font-weight: bold;
+}
+
+.imgWrap {
+    position: absolute; 
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
